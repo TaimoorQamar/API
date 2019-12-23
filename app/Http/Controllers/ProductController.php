@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return  product::all();
     }
 
     /**
@@ -45,8 +45,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Product $product)
-    {
-        //
+    {return $product;
+        return new ProductResource($product);
     }
 
     /**
